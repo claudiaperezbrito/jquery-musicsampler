@@ -5,6 +5,7 @@ $(document).ready(function() {
 //function to hide all audio players
 
 function hideAll() {
+    $('#nineteen').hide();
     $('#twentyone').hide();
     $('#skyfall').hide();
     $('#twentyfive').hide();
@@ -20,26 +21,26 @@ $('.cover').click(function() {
 
   switch ($(this).attr("id")) {
     case "fotouna":
-      $('#19').play('.album');
-      $('#19').show('p');
+      $('#nineteen').show();
       break;
     case "fotodos":
-      $('#21').play();
-      $('#21').show('p');
+      $('#twentyone').show();
       break
     case "fototres":
-      $('#bond').play();
-      $('#bond').show('p');
+      $('#skyfall').show();
       break;
     case "fotocuatro":
-      $('#25').play();
-      $('#25').show('p');
+      $('#twentyfive').show();
       break;
   }
   $('audio').each(function() {
     this.pause();
     this.currentTime = 0;
 });
+
+    $('.text').click(function() {
+    $('.text').show();
+  });
 
 }); // end of f(x)
 
